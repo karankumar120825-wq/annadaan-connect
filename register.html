@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – Annadaan Connect</title>
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+
+  <nav id="navbar">
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+        <span class="logo-icon">🍱</span>
+        Annadaan<span class="logo-accent">&nbsp;Connect</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="auth-wrapper">
+    <div class="auth-split-left">
+      <h2 class="auth-splash-title">Join the<br/>Movement 🌾</h2>
+      <p class="auth-splash-sub">Register today and start turning your celebrations into meals for those who need it most.</p>
+      <div class="benefit-list">
+        <div class="benefit-item"><div class="benefit-icon">⚡</div><div class="benefit-text"><h4>Instant NGO Alerts</h4><p>Notify multiple NGOs with one click</p></div></div>
+        <div class="benefit-item"><div class="benefit-icon">📊</div><div class="benefit-text"><h4>Track Your Impact</h4><p>See how many meals you've contributed</p></div></div>
+        <div class="benefit-item"><div class="benefit-icon">✅</div><div class="benefit-text"><h4>Verified NGO Network</h4><p>All NGOs are background-checked</p></div></div>
+        <div class="benefit-item"><div class="benefit-icon">🏆</div><div class="benefit-text"><h4>Get Certificate</h4><p>Appreciation certificate for every donation</p></div></div>
+      </div>
+    </div>
+    <div class="auth-split-right">
+      <div class="auth-form-card">
+        <h2>Create Account</h2>
+        <p class="subtitle">Join thousands making a difference</p>
+
+        <div id="regError" class="form-error" style="display:none;"></div>
+        <div id="regSuccess" class="form-success" style="display:none;"></div>
+
+        <label style="font-size:0.85rem;font-weight:600;color:#444;display:block;margin-bottom:8px;">Register As</label>
+        <div class="role-select">
+          <div class="role-btn selected" id="role-event" onclick="selectRole('event')">
+            <div class="role-icon">🎊</div>
+            <div class="role-name">Event Host</div>
+          </div>
+          <div class="role-btn" id="role-ngo" onclick="selectRole('ngo')">
+            <div class="role-icon">🤝</div>
+            <div class="role-name">NGO / Volunteer</div>
+          </div>
+        </div>
+
+        <form id="registerForm">
+          <input type="hidden" id="reg-role" value="event" />
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="reg-fname" placeholder="Aarav" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="reg-lname" placeholder="Sharma" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="reg-email" placeholder="aarav@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" id="reg-phone" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-group" id="ngo-name-group" style="display:none;">
+            <label>NGO / Organization Name</label>
+            <input type="text" id="reg-ngo" placeholder="e.g. Robin Hood Army Delhi" />
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <select id="reg-city" required>
+              <option value="">Select your city</option>
+              <option>Delhi NCR</option>
+              <option>Mumbai</option>
+              <option>Bangalore</option>
+              <option>Chennai</option>
+              <option>Hyderabad</option>
+              <option>Pune</option>
+              <option>Kolkata</option>
+              <option>Ahmedabad</option>
+              <option>Jaipur</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="reg-password" placeholder="Min. 8 characters" required />
+              <button type="button" class="toggle-pass" onclick="togglePass('reg-password', this)">👁</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" id="reg-confirm" placeholder="Repeat password" required />
+          </div>
+          <button type="submit" class="btn-full" id="regBtn">Create Account</button>
+        </form>
+
+        <div class="switch-link">
+          Already have an account? <a href="login.html">Login here →</a>
+        </div>
+        <div class="switch-link" style="margin-top:8px;">
+          <a href="index.html">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

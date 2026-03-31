@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Annadaan Connect</title>
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+
+  <nav id="navbar">
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+        <span class="logo-icon">🍱</span>
+        Annadaan<span class="logo-accent">&nbsp;Connect</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="auth-wrapper">
+    <div class="auth-split-left">
+      <h2 class="auth-splash-title">Welcome<br/>Back 🙏</h2>
+      <p class="auth-splash-sub">Login to manage your food donations and see your impact grow.</p>
+      <div class="auth-quote">
+        <div style="font-size:2rem;margin-bottom:8px;">🌟</div>
+        <div class="quote-text">"Our wedding fed 400 families!"</div>
+        <div class="quote-author">— Priya & Arjun, Delhi</div>
+      </div>
+      <div class="auth-stats">
+        <div class="as-item"><span class="as-num">12K+</span><span class="as-label">Meals Donated</span></div>
+        <div class="as-item"><span class="as-num">85+</span><span class="as-label">NGO Partners</span></div>
+      </div>
+    </div>
+    <div class="auth-split-right">
+      <div class="auth-form-card">
+        <h2>Login to Account</h2>
+        <p class="subtitle">Enter your credentials below</p>
+
+        <div id="loginError" class="form-error" style="display:none;"></div>
+        <div id="loginSuccess" class="form-success" style="display:none;"></div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="login-email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="login-password" placeholder="Your password" required />
+              <button type="button" class="toggle-pass" onclick="togglePass('login-password', this)">👁</button>
+            </div>
+          </div>
+          <div class="form-group" style="text-align:right;">
+            <a href="#" style="font-size:0.85rem;color:var(--saffron);">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-full" id="loginBtn">Login</button>
+        </form>
+
+        <div class="switch-link">
+          Don't have an account? <a href="register.html">Register here →</a>
+        </div>
+        <div class="switch-link" style="margin-top:8px;">
+          <a href="index.html">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

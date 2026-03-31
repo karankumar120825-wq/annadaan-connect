@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annadaan Connect – No Food Left Behind</title>
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="logo">
+      <span class="logo-icon">🍱</span>
+      Annadaan<span class="logo-accent">&nbsp;Connect</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#ngos">NGOs</a></li>
+      <li><a href="#notify">Donate Food</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a class="nav-cta" href="register.html">Register</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🌾 Fighting Food Waste Together</div>
+      <h1>Every Plate Saved Is a <em>Life Fed</em></h1>
+      <p>Weddings. Parties. Events. Tons of food go to waste every day. Annadaan Connect bridges celebrations with communities in need — instantly connecting you with NGOs who collect and distribute surplus food.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#notify">🍽️ Donate Surplus Food</a>
+        <a class="btn-secondary" href="#how">Learn How It Works</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-num">40%</div>
+            <div class="stat-label">Food wasted at Indian weddings</div>
+          </div>
+          <div class="stat-box green">
+            <div class="stat-num">12K+</div>
+            <div class="stat-label">Meals served this month</div>
+          </div>
+          <div class="stat-box green">
+            <div class="stat-num">85+</div>
+            <div class="stat-label">NGO partners across cities</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3 min</div>
+            <div class="stat-label">Avg. NGO response time</div>
+          </div>
+        </div>
+        <div class="food-flow">
+          <div class="flow-icons">🎊 → 🍛 → 🤝 → 😊</div>
+          Your celebration feeds someone's hunger
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar">
+    <div class="stats-item"><div class="stats-num">1.3B</div><div class="stats-desc">Tonnes of food wasted globally per year</div></div>
+    <div class="stats-item"><div class="stats-num">194M</div><div class="stats-desc">Undernourished people in India</div></div>
+    <div class="stats-item"><div class="stats-num">85+</div><div class="stats-desc">NGOs connected on our platform</div></div>
+    <div class="stats-item"><div class="stats-num">24/7</div><div class="stats-desc">Round the clock food collection</div></div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section" id="how">
+    <div class="section-tag">🔄 The Process</div>
+    <h2 class="section-title">How Annadaan Connect Works</h2>
+    <p class="section-sub">A simple, fast process that turns your celebration's surplus into someone's meal.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-icon">📝</div>
+        <h3>Register Your Event</h3>
+        <p>Sign up and register your wedding, birthday, corporate event, or any celebration with details like date, venue, and expected food quantity.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-icon">📢</div>
+        <h3>Alert Connected NGOs</h3>
+        <p>Instantly notify NGOs in your area about the surplus food. Share location, food type, and pickup window directly through the platform.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-icon">🤝</div>
+        <h3>NGO Confirms Pickup</h3>
+        <p>Your nearest partner NGO confirms the collection, assigns volunteers, and coordinates with you on the right time to pick up the food.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-icon">😊</div>
+        <h3>Food Reaches the Needy</h3>
+        <p>The collected food is distributed to shelters, orphanages, and underprivileged communities. You receive a confirmation with impact stats.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NGO SECTION ===== -->
+  <section class="ngo-section" id="ngos">
+    <div class="ngo-inner">
+      <div>
+        <div class="section-tag" style="color:var(--gold);">🌿 Our Partners</div>
+        <h2 class="section-title" style="color:white;">Trusted NGOs Ready to Act</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.75);">We work with verified NGOs across major cities who are equipped, trained, and ready to collect food within minutes of your alert.</p>
+        <a class="btn-white" href="#notify">📨 Send Alert to NGOs</a>
+      </div>
+      <div class="ngo-cards" id="ngoList">
+        <!-- Populated by JS via API -->
+        <p style="color:rgba(255,255,255,0.6);">Loading NGOs...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTIFY NGO FORM ===== -->
+  <section class="notify-section" id="notify">
+    <div class="notify-box">
+      <div class="notify-header">
+        <div class="icon">📨</div>
+        <h2>Alert NGOs About Your Event</h2>
+        <p>Fill in your event details and we'll immediately notify nearby NGOs to collect your surplus food.</p>
+      </div>
+      <form id="alertForm">
+        <div class="notify-grid">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="nf-name" placeholder="e.g. Rajesh Sharma" required />
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" id="nf-phone" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-group">
+            <label>Event Type</label>
+            <select id="nf-event" required>
+              <option value="">Select Event Type</option>
+              <option>Wedding / Shaadi</option>
+              <option>Birthday Party</option>
+              <option>Corporate Event</option>
+              <option>Religious Ceremony / Pooja</option>
+              <option>Political / Community Event</option>
+              <option>Hotel / Restaurant Surplus</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Event Date & Time</label>
+            <input type="datetime-local" id="nf-datetime" required />
+          </div>
+          <div class="form-group full-width">
+            <label>Venue / Address</label>
+            <input type="text" id="nf-venue" placeholder="Full address with landmark, city" required />
+          </div>
+          <div class="form-group">
+            <label>Estimated Food Quantity</label>
+            <select id="nf-qty" required>
+              <option value="">Approximate amount</option>
+              <option>Less than 10 kg / 50 plates</option>
+              <option>10–25 kg / 50–150 plates</option>
+              <option>25–50 kg / 150–300 plates</option>
+              <option>50–100 kg / 300–600 plates</option>
+              <option>100+ kg / 600+ plates</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Food Type</label>
+            <select id="nf-foodtype" required>
+              <option value="">Select food type</option>
+              <option>Vegetarian only</option>
+              <option>Non-vegetarian</option>
+              <option>Mixed (Veg + Non-veg)</option>
+              <option>Sweets / Desserts only</option>
+              <option>Raw / Uncooked ingredients</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label>Additional Message for NGO</label>
+            <textarea id="nf-msg" placeholder="Any special notes — e.g. food will be packed, need refrigeration, etc."></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Select NGOs to Notify</label>
+          <div class="ngo-select-grid" id="ngoCheckGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        <button type="submit" class="notify-submit">
+          <span>📨</span> Send Alert to NGOs Now
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:white;">🍱 Annadaan<span style="color:var(--gold);">&nbsp;Connect</span></div>
+        <p>Bridging celebration with compassion. Every meal you save today feeds hope for someone tomorrow.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#how">How It Works</a>
+        <a href="#ngos">NGO Partners</a>
+        <a href="#notify">Donate Food</a>
+        <a href="register.html">Register / Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>For NGOs</h4>
+        <a href="register.html">Register NGO</a>
+        <a href="#">NGO Dashboard</a>
+        <a href="#">Volunteer Portal</a>
+        <a href="#">Food Safety Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:help@annadaan.in">📧 help@annadaan.in</a>
+        <a href="tel:18001234567">📞 1800-123-4567</a>
+        <a href="#">WhatsApp Us</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annadaan Connect. Made with ❤️ to fight hunger. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
